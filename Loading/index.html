@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Loading</title>
+  </head>
+  <body style="overflow: hidden">
+    <div id="preload">
+      <div class="cssload-loader">
+        <div class="cssload-inner cssload-one"></div>
+        <div class="cssload-inner cssload-two"></div>
+        <div class="cssload-inner cssload-three"></div>
+      </div>
+    </div>
+    <div class="contain" style="width: 100%">
+      <img
+        src="https://images.unsplash.com/photo-1679537239678-c9ebd2a1d933?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+        alt=""
+        width="100%"
+      />
+    </div>
+  </body>
+  <script>
+    window.onload = () => {
+      setTimeout(() => {
+        preload.style.display = "none";
+      }, 1000);
+    };
+  </script>
+</html>

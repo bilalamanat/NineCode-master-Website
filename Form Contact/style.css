@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #86aaff;
+  display: grid;
+  place-items: center;
+}
+.container {
+  max-width: 1202px;
+  width: 90%;
+  height: 80%;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+}
+.container .pic {
+  background-image: url(/Gambar.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 47%;
+  height: 100%;
+  border-radius: 10px;
+}
+.container .form {
+  margin: 1em 0;
+  width: 53%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+Form {
+  width: 90%;
+  margin-top: 2em;
+}
+Form ul li {
+  list-style: none;
+}
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 0px;
+  background-color: #e6e6e6;
+  margin-bottom: 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
+  outline: none;
+}
+.message textarea {
+  width: 100%;
+  border: 0px;
+  border-radius: 15px;
+  background-color: #e6e6e6;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  resize: vertikal;
+  outline: none;
+}
+
+form button {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.1em;
+  color: white;
+  letter-spacing: 1px;
+  background-color: #55b943;
+  border: 0;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 1.2em;
+}
+@media (max-width: 722px) {
+  .container .pic {
+    display: none;
+  }
+  .container .form {
+    width: 100%;
+  }
+}

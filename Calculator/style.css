@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(34, 34, 42);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 60px);
+  background-color: rgb(30, 31, 32);
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  gap: 0.7rem;
+}
+.calculator button {
+  border: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(62, 83, 96);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.calculator button:hover {
+  background-color: rgb(72, 73, 81);
+  color: #fff;
+}
+.span-2:last-child {
+  background-color: rgb(240, 172, 46);
+  color: #fff;
+}
+.span-2 {
+  grid-column: span 2;
+}
+
+.calculator > .output {
+  font-size: 2rem;
+  background-color: inherit;
+  color: rgb(255, 255, 255);
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-direction: column;
+  word-break: break-all;
+  border-radius: inherit;
+}
+
+.output .prev-display {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(144, 142, 142);
+}

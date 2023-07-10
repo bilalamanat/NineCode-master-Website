@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  font-weight: 500;
+  color: var(--text-color);
+}
+p,
+span {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: var(--text-color) !important;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.hiden {
+  display: none;
+}
+:root {
+  --main-color: #2d3250;
+  --button-color: #f8b179;
+  --text-color: #ffffff;
+  --link-color: #676f9d;
+}
+
+/* Button */
+form :where(button[type="submit"], button.submit, span.submit) {
+  padding: 0.8em 2.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  border: none;
+  border-radius: 7px;
+  margin-top: 2em;
+  margin-right: 1em;
+  font-size: 0.8em;
+}
+/* Form */
+.get-form {
+  flex-direction: column;
+  background-color: var(--main-color);
+  padding: 2.5em;
+}
+/* Titel */
+.get-form form h1 span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.get-form form p {
+  width: 80%;
+  font-size: 0.9em;
+  margin-bottom: 2em;
+  color: var(--text-color);
+}
+/* Input */
+.get-form form .form-input .inputBox {
+  margin: 1.5em 0;
+  position: relative;
+}
+.get-form form .form-input .inputBox :where(label, input) {
+  padding: 1em 1em;
+  font-size: 1em;
+}
+.get-form form .form-input .inputBox label {
+  position: absolute;
+  font-weight: 500;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+  color: rgba(255, 255, 255, 0.432);
+  pointer-events: none;
+  z-index: 1;
+}
+.form-input .inputBox label::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 0;
+  left: 0;
+  height: 10px;
+  top: 10px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.get-form form .form-input .inputBox input {
+  border-radius: 13px;
+  width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.432);
+  background-color: var(--link-color);
+  color: var(--text-color);
+  font-weight: 500;
+}
+.form-input .inputBox input:focus ~ label,
+.form-input .inputBox input:valid ~ label,
+.form-input .inputBox input:not([value=""]) ~ label {
+  padding: 0;
+  top: -10px;
+  left: 23px;
+  color: var(--text-color);
+}
+.form-input .inputBox input:focus ~ label::before,
+.form-input .inputBox input:valid ~ label::before,
+.form-input .inputBox input:not([value=""]) ~ label::before {
+  width: 110%;
+  left: -5%;
+  background-color: var(--link-color);
+}
+
+@media (max-width: 433px) {
+  form :where(h1, p) {
+    text-align: center;
+    width: 100% !important;
+  }
+  .form-input .box-input {
+    grid-template-columns: 1fr;
+  }
+}

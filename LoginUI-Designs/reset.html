@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Forgot Password</title>
+  </head>
+  <body class="flex">
+    <div class="get-form flex">
+      <button>Forgot Password</button>
+      <div class="form-password">
+        <!-- Reset Password -->
+        <form id="createPassword" action="/index.html" method="post">
+          <h1><span>Create</span> new password</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita rem aut vero.</p>
+          <div class="form-input">
+            <div class="inputBox">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                value=""
+                onkeyup="this.setAttribute('value', this.value)"
+              />
+              <label for="password">New password</label>
+            </div>
+            <div class="inputBox">
+              <input
+                type="password"
+                name="password2"
+                id="password2"
+                required
+                value=""
+                onkeyup="this.setAttribute('value', this.value)"
+              />
+              <label for="password2">Confirm password</label>
+            </div>
+            <a href="forgot.html"><span class="submit">Back</span></a>
+            <button type="submit" name="save">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

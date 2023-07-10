@@ -1,0 +1,37 @@
+body {
+  background-image: url("/img/SignUp.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 16px;
+}
+
+/* get-form */
+.get-form {
+  width: 40em;
+  background-color: rgba(45, 50, 80, 0.71) !important;
+  opacity: 0.94;
+  backdrop-filter: blur(45px);
+  border-radius: 19px;
+}
+.get-form > button {
+  background-color: var(--link-color);
+  border: 3px solid var(--link-color);
+  border-radius: 10px;
+  padding: 7px 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 5em;
+}
+.get-form .verificationCode {
+  color: var(--text-color);
+  display: block;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.get-form .verificationCode:hover {
+  opacity: 50%;
+}

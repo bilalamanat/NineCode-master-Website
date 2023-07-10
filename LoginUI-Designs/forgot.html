@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Forgot Password</title>
+  </head>
+  <body class="flex">
+    <div class="get-form flex">
+      <button>Forgot Password</button>
+      <div class="form-password">
+        <!-- Forgot Password -->
+        <form id="forgotPassword" method="post" action="reset.html">
+          <h1><span>Forgot</span> password</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, qui sed. Temporibus aliquam blanditiis
+            pariatur officia voluptate cumque quis alias.
+          </p>
+          <div class="form-input">
+            <div class="inputBox">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                value=""
+                onkeyup="this.setAttribute('value', this.value)"
+              />
+              <label for="email">Email</label>
+            </div>
+            <div class="inputBox">
+              <input
+                type="text"
+                name="code"
+                id="code"
+                required
+                value=""
+                onkeyup="this.setAttribute('value', this.value)"
+              />
+              <label for="code">Verification Code</label>
+            </div>
+            <span class="verificationCode">Give me verification code</span>
+            <button class="submit" name="next">Next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

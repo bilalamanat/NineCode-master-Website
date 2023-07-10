@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Login UI Design</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="get-form flex dismiss">
+        <!-- get-form section1 -->
+        <div class="button-switch">
+          <button id="buttonIn" class="active">Sign In</button>
+          <button id="buttonUp">Sign Up</button>
+        </div>
+        <!-- get-form section2 -->
+        <div class="form">
+          <form id="signin" action="" method="post">
+            <h1><span>Welcome</span> To Insketch Magarer</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, itaque quo?</p>
+            <div class="form-input">
+              <div class="inputBox">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value=""
+                  onkeyup="this.setAttribute('value', this.value)"
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="passwod"
+                  name="password"
+                  id="password"
+                  required
+                  value=""
+                  onkeyup="this.setAttribute('value', this.value)"
+                />
+                <label for="password">Password</label>
+              </div>
+              <div class="menuBox flex">
+                <div class="checkbox">
+                  <input type="checkbox" name="checkbox" id="checkbox" />
+                  <label for="checkbox">Remember Me</label>
+                </div>
+                <a href="forgot.html">Forgot password</a>
+              </div>
+              <button type="submit" name="signin">Sign In</button>
+            </div>
+          </form>
+          <form id="signup" class="hiden" action="" method="post">
+            <h1><span>Welcome</span> To Insketch Magarer</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione corporis laborum, aliquid natus at
+              officia perspiciatis. Repudiandae doloribus animi molestiae adipisci! Adipisci odit temporibus accusamus
+              eius.
+            </p>
+            <div class="form-input">
+              <div class="box-input">
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    required
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value)"
+                  />
+                  <label for="firstname">First Name</label>
+                </div>
+                <div class="inputBox">
+                  <input
+                    type="text"
+                    name="lastname"
+                    id="lastname"
+                    required
+                    value=""
+                    onkeyup="this.setAttribute('value', this.value)"
+                  />
+                  <label for="lastname">Last Name</label>
+                </div>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value=""
+                  onkeyup="this.setAttribute('value', this.value)"
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="passwod"
+                  name="password"
+                  id="password"
+                  required
+                  value=""
+                  onkeyup="this.setAttribute('value', this.value)"
+                />
+                <label for="password">Password</label>
+              </div>
+              <div class="inputBox">
+                <input
+                  type="passwod"
+                  name="password2"
+                  id="password2"
+                  required
+                  value=""
+                  onkeyup="this.setAttribute('value', this.value)"
+                />
+                <label for="password2">Confirm Password</label>
+              </div>
+              <button type="submit" name="signup">Sign Up</button>
+            </div>
+          </form>
+        </div>
+        <!-- get-form section3 -->
+        <div class="more-option">
+          <div class="paragraf">
+            <p>More <span>Sign In</span> Methods</p>
+          </div>
+          <div class="boxIcon flex">
+            <i class="Ficon bx bxl-github"></i>
+            <i class="Ficon bx bxl-facebook"></i>
+            <i class="Ficon bx bxl-apple"></i>
+            <i class="Ficon bx bxl-google"></i>
+            <i class="Ficon bx bx-qr"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

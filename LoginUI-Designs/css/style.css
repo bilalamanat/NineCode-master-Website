@@ -1,0 +1,164 @@
+body {
+  overflow: hidden;
+  width: 100vw;
+}
+.container {
+  color: var(--text-color);
+  background-image: url("/img/SignIn.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container .get-form {
+  justify-content: space-between;
+  height: 100vh;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+}
+/* get-form section1 */
+.get-form .button-switch {
+  background-color: var(--link-color);
+  width: fit-content;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.get-form .button-switch button {
+  background-color: var(--link-color);
+  border: 3px solid var(--link-color);
+  border-radius: 10px;
+  padding: 7px 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: all 1s ease;
+}
+.get-form .button-switch button.active {
+  background-color: #7784ce;
+  font-weight: 700;
+}
+
+/* .get-form section2 oprator */
+#signup,
+#signin {
+  width: 32em;
+}
+
+/* get-form section2 Form SignIn*/
+.get-form form .menuBox {
+  justify-content: space-between;
+  font-weight: 500;
+}
+.get-form form .menuBox a {
+  font-weight: 400;
+  color: var(--link-color);
+  font-size: 0.8em;
+}
+.get-form form .menuBox a:hover {
+  color: #7784ce;
+}
+/* get-form section2 Form SignUp*/
+.form-input .box-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.form-input .box-input .inputBox {
+  margin: 0 !important;
+}
+/* get-form section3 */
+.more-option {
+  margin-top: 30px;
+  width: 100%;
+}
+.get-form .paragraf p {
+  color: var(--link-color);
+  position: relative;
+  text-align: center;
+  z-index: 3;
+}
+.get-form .paragraf p::after,
+.get-form .paragraf p::before {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.get-form .paragraf p::after {
+  width: 100%;
+  border-top: 1px solid var(--link-color);
+  z-index: -2;
+}
+.get-form .paragraf p::before {
+  height: 19px;
+  background-color: var(--main-color);
+  width: 12em;
+  z-index: -1;
+}
+.get-form .boxIcon {
+  justify-content: center;
+  position: relative;
+  margin: 1.6em 0 1em;
+  gap: 1em;
+}
+.get-form .boxIcon .Ficon {
+  font-size: 1.9em;
+}
+
+/* Animation */
+@media (min-width: 592px) {
+  .selected {
+    animation: slide-in 0.5s forwards;
+  }
+
+  .dismiss {
+    animation: slide-out 0.5s forwards;
+  }
+
+  @keyframes slide-in {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: calc(100% - (5em + 32em));
+    }
+  }
+  @keyframes slide-out {
+    0% {
+      left: calc(100% - (5em + 32em));
+    }
+    100% {
+      left: 0;
+    }
+  }
+}
+
+/* Responsif */
+@media (max-width: 591px) {
+  .container {
+    display: block;
+  }
+  #signup,
+  #signin {
+    width: 100%;
+  }
+  .get-form {
+    background-color: rgba(45, 50, 80, 0.71) !important;
+    backdrop-filter: blur(10px);
+    width: 100% !important;
+  }
+  .get-form .paragraf p::before {
+    background-color: rgba(45, 50, 80, 0.71) !important;
+    backdrop-filter: blur(10px);
+  }
+  .get-form .paragraf p::after,
+  .get-form .paragraf p::before {
+    top: -23px;
+  }
+  .get-form .paragraf p::before {
+    height: 0;
+  }
+}

@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  overflow: hidden;
+}
+.flex-container,
+.output {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.flex-container .input-form input {
+  width: 20rem;
+  padding: 5px;
+}
+.flex-container .input-form .btn {
+  padding: 5px 20px;
+  margin-left: 5px;
+}
+.flex-container .desk {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+.flex-container .desk a {
+  font-family: sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  color: #0093e9;
+  transition: all 0.5s ease-in-out;
+}
+.flex-container .desk a:hover {
+  color: #000;
+}
+.output {
+  margin-top: 7px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.output .form-output {
+  display: flex;
+  gap: 13px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.output input {
+  width: 100%;
+  border: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+.output i {
+  font-family: "Font Awesome 5 Free";
+  padding: 4px;
+  border-radius: 5px;
+}
+.output i:hover {
+  color: rgb(17, 205, 230);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Alert Section */
+:root {
+  --color-1: #a1e4c5;
+  --color-2: #38c284;
+  --color-3: #077441;
+}
+.alert {
+  background: var(--color-1);
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-radius: 4px;
+  border-left: 4px solid var(--color-2);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+}
+.alert.showAlert {
+  opacity: 1;
+  pointer-events: auto;
+}
+.alert.show {
+  animation: show_slide 1s ease forwards;
+}
+.alert .msg {
+  margin: 10px;
+  font-size: 18px;
+  color: var(--color-3);
+}
+.alert .close-btn {
+  right: 0px;
+  top: 50%;
+  background: var(--color-2);
+  padding: 0 10px;
+  cursor: pointer;
+}
+.alert .close-btn:hover {
+  background: var(--color-3);
+}
+.alert .close-btn .fas {
+  color: var(--color-1);
+  font-size: 22px;
+  line-height: 40px;
+}
+@keyframes show_slide {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-10%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+.alert.hide {
+  animation: hide_slide 1s ease forwards;
+}
+@keyframes hide_slide {
+  0% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(0%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}

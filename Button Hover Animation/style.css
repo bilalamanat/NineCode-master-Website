@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #22222a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  height: 100vh;
+}
+button {
+  border: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  display: inline;
+  letter-spacing: 3px;
+  padding: 14px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  transition-delay: 1s;
+  background: #4b4d55;
+}
+button:hover {
+  transition-delay: 0.8s;
+  color: rgba(255, 255, 255, 1);
+}
+button span {
+  display: block;
+  position: absolute;
+  background: var(--color);
+}
+/* animasi button */
+button span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+button:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+button span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform: scalex(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+button:hover span:nth-child(2) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+button span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+button:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+button span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  transform: scalex(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+button:hover span:nth-child(4) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+/* end animasi button */
